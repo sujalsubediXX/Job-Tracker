@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@theme {
+  --color-paper: #faf9f6;
+  --color-paper-raised: #ffffff;
+  --color-ink: #1c2127;
+  --color-ink-muted: #62687a;
+  --color-line: #e6e2d8;
+
+  --color-brand: #3454d1;
+  --color-brand-dark: #2740a8;
+  --color-brand-light: #eef1fc;
+
+  --color-amber: #e8a33d;
+  --color-amber-dark: #b97c1f;
+
+  --color-stage-applied: #64748b;
+  --color-stage-applied-bg: #eef1f5;
+  --color-stage-interviewing: #c2790a;
+  --color-stage-interviewing-bg: #fbf0dd;
+  --color-stage-offer: #1f7a44;
+  --color-stage-offer-bg: #e7f5ec;
+  --color-stage-rejected: #b3403a;
+  --color-stage-rejected-bg: #fbeae8;
+
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+html {
+  font-family: var(--font-body);
+}
+
+body {
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-brand);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
